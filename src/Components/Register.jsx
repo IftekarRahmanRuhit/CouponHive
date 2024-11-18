@@ -1,6 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
+
 
 
 const Register = () => {
@@ -8,13 +11,42 @@ const Register = () => {
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate()
 
+   const [showPassword, setShowPassword] = useState(false);
+
+
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
+        const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(name,email,password);
+
+        const terms = event.target.terms.checked
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+
+
+        if (password.length < 6) {
+          toast.error("Password should be 6 Characters")
+          return;
+        }
+
+
+        if (!passwordRegex.test(password)) {
+          toast.error(
+            "Password should contain at least one uppercase letter, one lowercase letter, and one number. It must be at least 6 characters long."
+          );
+          return;
+        }
+
         
+        if(!terms){
+          toast.error('Please Accept Our Terms and Condition')
+          return;
+        }
+
+        
+
         createUser(email,password)
         .then(result =>{
           console.log(result.user)
@@ -25,8 +57,9 @@ const Register = () => {
           console.log(error.message)
         })
       
+
     
-        console.log(name, email, password);
+       
 
 
       };
@@ -57,6 +90,22 @@ const Register = () => {
                     required
                   />
                 </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Photo</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="photo"
+                    placeholder="photo url"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+
+
+
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -69,22 +118,34 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Password</span>
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    className="input input-bordered"
-                    required
-                  />
-                  <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label>
+                <div className="form-control relative">
+                <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="password"
+              className="input input-bordered"
+            />
+            <button
+            type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="btn btn-xs absolute right-4 top-12"
+            >
+              {/* <FaEye /> */}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+
+            <div className="form-control">
+              <label className="label justify-start gap-3 cursor-pointer ">
+                <input type="checkbox" name = 'terms' className="checkbox mt-2" />
+                <span className="label-text mt-2">
+                  Accept Our Terms and Condition.
+                </span>
+              </label>
+            </div>
+
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-warning">Register</button>

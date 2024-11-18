@@ -1,13 +1,18 @@
 
 
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { auth } from "../Firebase/Firebase.init";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
     const navigate = useNavigate();
     const { signINUser, signInWithGoogle } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const emailRef = useRef();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -15,15 +20,22 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
+        if (password.length < 6) {
+            toast.error("Password should be 6 Characters")
+            return;
+          }
+
         signINUser(email, password)
             .then(result => {
                 console.log(result.user, 'sign in successful');
+                toast.success("Wellcome Back!!");
                 e.target.reset();
                 navigate('/');
             })
             .catch(error => {
                 console.log(error.message);
-                toast.error('Something Error')
+                toast.error("Password or email might be wrong. Please try again.");
+
             });
     };
 
@@ -35,8 +47,35 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error.message);
+                toast.error("Password or email might be wrong. Please try again.");
             });
     };
+
+    const handleForgetPassword =()=>{
+
+        const email = emailRef.current.value
+    
+        if(!email){
+          toast.error('Please provide a valid email address')
+        }
+        else{
+          sendPasswordResetEmail(auth,email)
+          .then(()=>{
+        toast.success('Password Reset Email Sent, Please Check your email')
+
+
+          })
+        }
+    
+      }
+
+
+
+
+
+
+
+
 
     return (
         <div className="hero bg-base-200 min-h-screen">
@@ -54,23 +93,31 @@ const Login = () => {
                                 type="email"
                                 name="email"
                                 placeholder="email"
+                                ref={emailRef}
                                 className="input input-bordered"
                                 required
                             />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
+                        <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="password"
+              className="input input-bordered"
+            />
+            <button
+             type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="btn btn-xs absolute right-4 top-12"
+            >
+              {/* <FaEye /> */}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
                             <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input
-                                type="password"
-                                name="password"
-                                placeholder="password"
-                                className="input input-bordered"
-                                required
-                            />
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">
+                                <a onClick={handleForgetPassword} href="#" className="label-text-alt link link-hover">
                                     Forgot password?
                                 </a>
                             </label>
