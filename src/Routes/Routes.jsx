@@ -1,11 +1,40 @@
 
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
+import MainLayout from "../Components/MainLayout/MainLayout";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
+import Brands from "../Components/Brands";
+import AboutUs from "../Components/AboutUs";
+import Profile from "../Components/Profile";
+import PrivateRoute from "../Components/PrivateRoute";
 
  export const routes = createBrowserRouter([
     {
       path: "/",
-      element: <div>Hello world!</div>,
+      element: <MainLayout></MainLayout>,
+      children: [
+        {
+            path: '/login',
+            element: <Login></Login>
+        },
+        {
+            path: '/register',
+            element: <Register></Register>
+        },
+        {
+            path: '/brands',
+            element: <Brands></Brands>
+        },
+        {
+            path: '/about',
+            element:<AboutUs></AboutUs>
+        },
+        {
+            path: '/profile',
+            element:<PrivateRoute>
+                <Profile></Profile>
+            </PrivateRoute>
+        }
+      ]
     },
   ]);
