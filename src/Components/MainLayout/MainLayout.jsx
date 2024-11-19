@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Toaster } from "react-hot-toast";
+import Home from "../Home";
 
 const MainLayout = () => {
   return (
@@ -16,12 +17,13 @@ const MainLayout = () => {
           },
           error: {
             style: {
-                color: 'red'
+              color: "red",
             },
           },
         }}
       />
       <Navbar></Navbar>
+
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

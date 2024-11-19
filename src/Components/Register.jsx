@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile,} = useContext(AuthContext);
     const navigate = useNavigate()
 
    const [showPassword, setShowPassword] = useState(false);
@@ -47,11 +47,17 @@ const Register = () => {
 
         
 
-        createUser(email,password)
+        createUser(email,password,name)
         .then(result =>{
           console.log(result.user)
-          e.target.reset()
-          navigate('/')
+          updateUserProfile({displayName:name , photoURL:photo})
+          .then(()=>{
+            e.target.reset()
+            navigate('/')
+          })
+          .catch(error =>{
+            console.log(error)
+          })
         })
         .catch(error => {
           console.log(error.message)
@@ -63,10 +69,6 @@ const Register = () => {
 
 
       };
-
-
-
-
 
 
     return (
@@ -133,7 +135,7 @@ const Register = () => {
               onClick={() => setShowPassword(!showPassword)}
               className="btn btn-xs absolute right-4 top-12"
             >
-              {/* <FaEye /> */}
+            
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
 
