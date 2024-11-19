@@ -1,0 +1,154 @@
+[
+    {
+      "id": "1",
+      "brand_name": "Agoda",
+      "rating": 4.5,
+      "description": "Book hotels and flights at unbeatable prices.",
+      "brand_logo": "https://i.ibb.co.com/8MGMHy0/agoda.png",
+      "coupons": [
+        {
+          "coupon_code": "AGODA20",
+          "description": "20% off on hotel bookings",
+          "expiry_date": "2024-12-31",
+          "condition": "Applicable for bookings over $100",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.agoda.com",
+      "category": "Travel",
+      "isSaleOn": true
+    },
+    {
+      "id": "2",
+      "brand_name": "AliExpress",
+      "rating": 4.2,
+      "description": "Shop millions of products at affordable prices.",
+      "brand_logo": "https://i.ibb.co.com/t4NJgy3/aliexpress.png",
+      "coupons": [
+        {
+          "coupon_code": "NEWUSER10",
+          "description": "10% off for new users",
+          "expiry_date": "2025-01-01",
+          "condition": "Minimum purchase $50",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.aliexpress.com",
+      "category": "E-commerce",
+      "isSaleOn": false
+    },
+    {
+      "id": "3",
+      "brand_name": "Bang Good",
+      "rating": 4.3,
+      "description": "Find amazing deals on electronics and more.",
+      "brand_logo": "https://i.ibb.co.com/wdZ7BBF/bang-good.png",
+      "coupons": [
+        {
+          "coupon_code": "BG30",
+          "description": "30% off on selected gadgets",
+          "expiry_date": "2024-12-10",
+          "condition": "Applicable for members only",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.banggood.com",
+      "category": "E-commerce",
+      "isSaleOn": true
+    },
+    {
+      "id": "4",
+      "brand_name": "Booking.com",
+      "rating": 4.7,
+      "description": "Find the best deals on hotels and accommodations worldwide.",
+      "brand_logo": "https://i.ibb.co.com/c1xVTyX/Booking-com.png",
+      "coupons": [
+        {
+          "coupon_code": "BOOK10",
+          "description": "10% off on your first booking",
+          "expiry_date": "2024-12-31",
+          "condition": "For new users only",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.booking.com",
+      "category": "Travel",
+      "isSaleOn": true
+    },
+    {
+      "id": "5",
+      "brand_name": "Daraz",
+      "rating": 4.6,
+      "description": "Your one-stop shopping platform in South Asia.",
+      "brand_logo": "https://i.ibb.co.com/3NrZYNB/Daraz.png",
+      "coupons": [
+        {
+          "coupon_code": "DARAZ20",
+          "description": "20% off on electronics",
+          "expiry_date": "2024-12-31",
+          "condition": "Applicable on orders above $200",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.daraz.com",
+      "category": "E-commerce",
+      "isSaleOn": true
+    },
+    {
+      "id": "6",
+      "brand_name": "Foodpanda",
+      "rating": 4.8,
+      "description": "Get your favorite meals delivered to your door.",
+      "brand_logo": "https://i.ibb.co.com/R7hRTpL/Food-Panda.png",
+      "coupons": [
+        {
+          "coupon_code": "PANDA50",
+          "description": "50% off on first order",
+          "expiry_date": "2024-11-30",
+          "condition": "Maximum discount $10",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.foodpanda.com",
+      "category": "Food Delivery",
+      "isSaleOn": true
+    },
+    {
+      "id": "7",
+      "brand_name": "FARFETCH",
+      "rating": 4.4,
+      "description": "Luxury fashion products for global customers.",
+      "brand_logo": "https://i.ibb.co.com/02tB8pr/Farfecth.png",
+      "coupons": [
+        {
+          "coupon_code": "FAR10",
+          "description": "10% off on your first purchase",
+          "expiry_date": "2025-01-01",
+          "condition": "Minimum order $100",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.farfetch.com",
+      "category": "Fashion",
+      "isSaleOn": false
+    },
+    {
+      "id": "8",
+      "brand_name": "FOREO",
+      "rating": 4.5,
+      "description": "Innovative beauty and wellness products.",
+      "brand_logo": "https://i.ibb.co.com/XY8J9WP/Foreo.png",
+      "coupons": [
+        {
+          "coupon_code": "BEAUTY15",
+          "description": "15% off on skincare devices",
+          "expiry_date": "2024-11-30",
+          "condition": "Valid for online purchases only",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.foreo.com",
+      "category": "Beauty",
+      "isSaleOn": true
+    }
+  ]
