@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 const Banner = () => {
-    // State to keep track of the active slide
+    
     const [activeSlide, setActiveSlide] = useState(1);
 
     useEffect(() => {
-        // Set an interval to automatically change the slide every 3 seconds
-        const interval = setInterval(() => {
-            setActiveSlide((prev) => (prev === 4 ? 1 : prev + 1)); // Cycle through slides 1 to 4
-        }, 3000); // Change slide every 3 seconds
 
-        // Cleanup the interval when the component is unmounted
+        const interval = setInterval(() => {
+            setActiveSlide((prev) => (prev === 4 ? 1 : prev + 1)); 
+        }, 2000); 
+
+
         return () => clearInterval(interval);
     }, []);
 

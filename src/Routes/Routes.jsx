@@ -8,15 +8,22 @@ import AboutUs from "../Components/AboutUs";
 import Profile from "../Components/Profile";
 import PrivateRoute from "../Components/PrivateRoute";
 import Home from "../Components/Home";
+import BrandDetails from "../Components/BrandDetails";
+import UpdateProfile from "../Components/UpdateProfile";
+import ErrorPage from "../Components/ErrorPage";
+import ForgetPassword from "../Components/ForgetPassword";
 
  export const routes = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
             path:'/',
-            element:<Home></Home> 
+            element:<Home></Home>,
+            loader:()=> fetch("../../public/CouponData.json")
+            
         },
         {
             path: '/login',
@@ -28,7 +35,8 @@ import Home from "../Components/Home";
         },
         {
             path: '/brands',
-            element: <Brands></Brands>
+            element: <Brands></Brands>,
+            loader:()=> fetch("../../public/CouponData.json")
         },
         {
             path: '/about',
@@ -39,6 +47,21 @@ import Home from "../Components/Home";
             element:<PrivateRoute>
                 <Profile></Profile>
             </PrivateRoute>
+        },
+        {
+            path: '/brands/:id',
+            element:<PrivateRoute>
+                <BrandDetails></BrandDetails>
+            </PrivateRoute>,
+            loader:()=> fetch("../../public/CouponData.json")
+        },
+        {
+            path: '/updateprofile',
+            element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+        },
+        {
+            path:'/forgetpassword',
+            element:<ForgetPassword></ForgetPassword>
         }
       ]
     },

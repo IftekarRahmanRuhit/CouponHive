@@ -106,8 +106,6 @@ const Register = () => {
                   />
                 </div>
 
-
-
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>

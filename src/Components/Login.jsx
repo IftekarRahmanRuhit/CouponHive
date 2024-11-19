@@ -6,12 +6,13 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { auth } from "../Firebase/Firebase.init";
 import loginbg from "../../public/login-bg.png";
 
+
 const Login = () => {
-  const navigate = useNavigate();
-  const { signINUser, signInWithGoogle, loading, setLoading } =
-    useContext(AuthContext);
+
+  const { signINUser, signInWithGoogle, loading, setLoading } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const emailRef = useRef();
+  const navigate = useNavigate()
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,8 +33,9 @@ const Login = () => {
       })
       .catch(() => {
         toast.error("Incorrect email or password. Please try again.");
+        setLoading(false);
       })
-      .finally(() => {});
+
   };
 
   const handleGoogleSignIn = () => {
@@ -56,13 +58,7 @@ const Login = () => {
     if (!email) {
       toast.error("Please provide a valid email address");
     } else {
-      sendPasswordResetEmail(auth, email)
-        .then(() => {
-          toast.success("Password reset email sent. Please check your inbox.");
-        })
-        .catch(() => {
-          toast.error("Failed to send password reset email. Try again.");
-        });
+      navigate('/forgetpassword', { state: { email } })
     }
   };
 
@@ -107,7 +103,7 @@ const Login = () => {
               <label className="label">
                 <a
                   onClick={handleForgetPassword}
-                  href="#"
+                  
                   className="label-text-alt link link-hover text-blue-500"
                 >
                   Forgot password?
