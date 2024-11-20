@@ -129,7 +129,7 @@ const Login = () => {
             <button
               onClick={handleGoogleSignIn}
               className="btn btn-outline w-full"
-              disabled={loading} // Disable button when loading
+              disabled={loading} 
             >
               {loading ? "Loading..." : "Sign In with Google"}
             </button>

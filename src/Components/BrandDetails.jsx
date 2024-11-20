@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 const BrandDetails = () => {
   const { id } = useParams();
   const data = useLoaderData();
-  const brand = data.find(brand => brand.id === id); // Assuming 'data' is an array of brands
+  const brand = data.find(brand => brand.id === id); 
   
 
   const handleCopyCode = () => {

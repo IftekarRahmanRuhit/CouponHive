@@ -3,7 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast from "react-hot-toast";
 import { FaUserCircle } from "react-icons/fa";
-
+import { FaUser } from "react-icons/fa";
+import { LuLogIn } from "react-icons/lu";
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,17 +22,30 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/brands">Brands</NavLink>
+        <NavLink to="/brands"           className={({ isActive }) =>
+            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+          }>Brands</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About us</NavLink>
+        <NavLink to="/about"           className={({ isActive }) =>
+            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+          }>About us</NavLink>
       </li>
       {user && (
         <li>
-          <NavLink to="/profile">Profile</NavLink>
+          <NavLink to="/profile"           className={({ isActive }) =>
+            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+          }>Profile</NavLink>
         </li>
       )}
     </>
@@ -52,10 +66,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full mx-auto bg-blue-50">
+    <div className="w-full mx-auto bg-blue-50 p-2">
       <div className="navbar w-11/12 mx-auto">
         <div className="navbar-start">
-          {/* Hamburger Icon for Mobile */}
           <div className="dropdown lg:hidden">
             <button
               className="btn btn-ghost lg:hidden"
@@ -83,11 +96,16 @@ const Navbar = () => {
               </ul>
             )}
           </div>
-          <a className="btn btn-ghost text-xl">CuponHive</a>
+          <Link
+            to="/"
+            className="btn btn-ghost text-2xl text-[#E1713B] font-bold"
+          >
+            CouponHive
+          </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu-horizontal space-x-8">{links}</ul>
         </div>
 
         <div className="navbar-end">
@@ -116,17 +134,17 @@ const Navbar = () => {
                   <div className="card-body p-2 w-full">
                     <span className="text-lg font-bold"></span>
 
-                    <span className="text-red-600 block overflow-hidden text-ellipsis whitespace-nowrap max-w-full">
+                    <span className="text-gray-800 font-bold text-xl block overflow-hidden text-ellipsis whitespace-nowrap max-w-full text-center">
                       {user?.displayName}
                     </span>
-                    <span className="text-red-600 block overflow-hidden text-ellipsis whitespace-nowrap max-w-full">
+                    <span className="text-gray-800 font-bold block overflow-hidden text-ellipsis whitespace-nowrap max-w-full text-center">
                       {user?.email}
                     </span>
 
                     <div className="card-actions">
                       <button
                         onClick={handleSignOut}
-                        className="btn btn-primary btn-block w-full"
+                        className="btn bg-[#E1713B] text-white hover:bg-orange-500 btn-block w-full mt-3"
                       >
                         Sign out
                       </button>
@@ -137,10 +155,17 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <Link className="btn btn-warning" to="/Register">
-                Register
+              <Link
+                className="btn mr-2 bg-[#E1713B] text-white hover:text-[#E1713B] hidden md:flex"
+                to="/Register"
+              >
+                <FaUser /> sign up
               </Link>
-              <Link className="btn btn-secondary" to="/login">
+              <Link
+                className="btn font-bold bg-[#E1713B] text-white hover:text-[#E1713B]"
+                to="/login"
+              >
+                <LuLogIn />
                 Login
               </Link>
             </>

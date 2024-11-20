@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import img1 from "../../public/Banner-1.jpg"
+import img2 from "../../public/Banner-2.jpg"
+import img3 from "../../public/Banner-3.jpg"
+import img4 from "../../public/Banner-4.jpg"
 
 const Banner = () => {
     
@@ -8,7 +12,7 @@ const Banner = () => {
 
         const interval = setInterval(() => {
             setActiveSlide((prev) => (prev === 4 ? 1 : prev + 1)); 
-        }, 2000); 
+        }, 3000); 
 
 
         return () => clearInterval(interval);
@@ -22,8 +26,8 @@ const Banner = () => {
                     className={`carousel-item relative w-full ${activeSlide === 1 ? 'block' : 'hidden'}`}
                 >
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-                        className="w-full"
+                        src={img1}
+                        className="w-full h-[450px]"
                     />
                 </div>
                 <div
@@ -31,8 +35,8 @@ const Banner = () => {
                     className={`carousel-item relative w-full ${activeSlide === 2 ? 'block' : 'hidden'}`}
                 >
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-                        className="w-full"
+                        src={img2}
+                        className="w-full h-[450px]"
                     />
                 </div>
                 <div
@@ -40,8 +44,8 @@ const Banner = () => {
                     className={`carousel-item relative w-full ${activeSlide === 3 ? 'block' : 'hidden'}`}
                 >
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-                        className="w-full"
+                        src={img3}
+                        className="w-full h-[450px]"
                     />
                 </div>
                 <div
@@ -49,8 +53,8 @@ const Banner = () => {
                     className={`carousel-item relative w-full ${activeSlide === 4 ? 'block' : 'hidden'}`}
                 >
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-                        className="w-full"
+                        src={img4}
+                        className="w-full h-[450px]"
                     />
                 </div>
             </div>
