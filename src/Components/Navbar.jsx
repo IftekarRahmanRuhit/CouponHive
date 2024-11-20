@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
           }
         >
           Home
@@ -33,18 +33,18 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/brands"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
           }>Brands</NavLink>
       </li>
       <li>
         <NavLink to="/about"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
           }>About us</NavLink>
       </li>
       {user && (
         <li>
           <NavLink to="/profile"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold" : "text-black hover:text-[#E1713B] font-semibold"
+            isActive ? "text-[#E1713B] font-semibold underline " : "text-black hover:text-[#E1713B] font-semibold"
           }>Profile</NavLink>
         </li>
       )}

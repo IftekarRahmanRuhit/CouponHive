@@ -58,7 +58,7 @@
   {
     "id": "2",
     "brand_name": "AliExpress",
-    "rating": 4.2,
+    "rating": 5,
     "description": "Shop millions of products at affordable prices.",
     "brand_logo": "https://i.ibb.co.com/Jp9n94v/Ali-Express-Logo-wine.png",
     "total_coupons": "5",
@@ -226,7 +226,7 @@
   {
     "id": "5",
     "brand_name": "Daraz",
-    "rating": 4.6,
+    "rating": 5,
     "description": "Your one-stop shopping platform in South Asia.",
     "brand_logo": "https://i.ibb.co.com/cyzXc18/Daraz-1.png",
     "total_coupons": "10",
@@ -422,7 +422,7 @@
   {
     "id": "8",
     "brand_name": "FOREO",
-    "rating": 4.5,
+    "rating": 3,
     "description": "Innovative beauty and wellness products.",
     "brand_logo": "https://i.ibb.co.com/VCfCR37/FOREO-Logo-500x281.png",
     "total_coupons": "9",
