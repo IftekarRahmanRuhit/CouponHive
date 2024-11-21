@@ -20,7 +20,7 @@ const Register = () => {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name,email,password);
+
 
         const terms = event.target.terms.checked
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
@@ -49,18 +49,18 @@ const Register = () => {
 
         createUser(email,password,name)
         .then(result =>{
-          console.log(result.user)
+
           updateUserProfile({displayName:name , photoURL:photo})
           .then(()=>{
             e.target.reset()
             navigate('/')
           })
           .catch(error =>{
-            console.log(error)
+            toast.error('Update Failed')
           })
         })
         .catch(error => {
-          console.log(error.message)
+          
         })
       
 

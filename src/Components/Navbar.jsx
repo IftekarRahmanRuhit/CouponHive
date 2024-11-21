@@ -5,6 +5,9 @@ import toast from "react-hot-toast";
 import { FaUserCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { LuLogIn } from "react-icons/lu";
+;
+import logo from '../../public/logo.png'
+
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +18,7 @@ const Navbar = () => {
         toast.success("Sign out successful");
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -98,9 +101,11 @@ const Navbar = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost text-2xl text-[#E1713B] font-bold"
+            className="btn btn-ghost text-2xl text-[#E1713B] font-bold flex justify-center items-center "
           >
-            CouponHive
+            {/* <p className="text-2xl"><RiCoupon3Fill /></p> */}
+            <img className="w-9 h-w-9 rounded-full" src={logo} alt="" />
+           <p className="text-2xl"> CouponHive</p>
           </Link>
         </div>
 

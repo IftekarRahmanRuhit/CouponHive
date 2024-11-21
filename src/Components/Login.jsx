@@ -65,7 +65,7 @@ const Login = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse w-full">
-        {/* Form Section */}
+
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <form onSubmit={handleLogin} className="card-body">
             <h1 className="text-3xl font-bold text-center mb-4">Login Now!</h1>
@@ -136,7 +136,7 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Text and Image Section */}
+
         <div className="flex flex-col justify-center items-center text-center lg:text-left lg:w-1/2 space-y-6">
           <h1 className="text-5xl font-bold">Welcome Back!</h1>
           <p className="py-6">

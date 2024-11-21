@@ -40,7 +40,7 @@ const Brands = () => {
           />
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#E1713B]"
-            onClick={() => console.log(searchQuery)}
+            onClick={() => (searchQuery)}
           >
             <FaSearch />
           </button>

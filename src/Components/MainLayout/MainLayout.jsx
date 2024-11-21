@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Toaster } from "react-hot-toast";
-import Home from "../Home";
+
 
 const MainLayout = () => {
   return (
@@ -24,7 +24,7 @@ const MainLayout = () => {
       />
       <Navbar></Navbar>
 
-  <div className="min-h-[calc(100vh-286px)]">
+  <div className="min-h-[calc(100vh-395px)]">
   <Outlet></Outlet>
   </div>
       <Footer></Footer>

@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import 'animate.css';
 const OnSellBrands = () => {
   const data = useLoaderData(); 
-  console.log(data); 
+
 
 
   const saleBrands = data.filter(brand => brand.isSaleOn);

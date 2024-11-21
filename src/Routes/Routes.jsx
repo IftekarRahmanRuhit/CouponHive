@@ -20,9 +20,10 @@ import ForgetPassword from "../Components/ForgetPassword";
       errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
-            path:'/',
+            // path:'',
+            index:true,
             element:<Home></Home>,
-            loader:()=> fetch("../../public/CouponData.json")
+            loader:()=> fetch("./CouponData.json")
             
         },
         {
@@ -36,7 +37,7 @@ import ForgetPassword from "../Components/ForgetPassword";
         {
             path: '/brands',
             element: <Brands></Brands>,
-            loader:()=> fetch("../../public/CouponData.json")
+            loader:()=> fetch("./CouponData.json")
         },
         {
             path: '/about',
@@ -53,7 +54,7 @@ import ForgetPassword from "../Components/ForgetPassword";
             element:<PrivateRoute>
                 <BrandDetails></BrandDetails>
             </PrivateRoute>,
-            loader:()=> fetch("../../public/CouponData.json")
+            loader:()=> fetch("./CouponData.json")
         },
         {
             path: '/updateprofile',
