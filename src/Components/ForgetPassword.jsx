@@ -33,13 +33,13 @@ const ForgetPassword = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-          <h2 className="text-2xl font-semibold text-center mb-4">Reset Password</h2>
-          <p className="text-gray-600 text-center mb-6">
+          <h2 className="text-2xl font-bold text-center mb-4 text-[#E1713B]">Reset Password</h2>
+          <p className="text-gray-600 text-center mb-6 font-medium">
             Enter your email address below to reset your password.
           </p>
           <div className="form-control mb-4">
             <label className="label">
-              <span className="label-text">Email Address</span>
+              <span className="label-text font-bold">Email Address</span>
             </label>
             <input
               type="email"
@@ -51,7 +51,7 @@ const ForgetPassword = () => {
           </div>
           <button
             onClick={handleResetPassword}
-            className="btn btn-primary w-full"
+            className="btn text-white bg-[#E1713B] hover:bg-orange-600 w-full"
           >
             Reset Password
           </button>

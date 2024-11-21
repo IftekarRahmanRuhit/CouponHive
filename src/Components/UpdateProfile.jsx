@@ -1,4 +1,3 @@
-
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaUserEdit } from "react-icons/fa";
@@ -8,9 +7,9 @@ import { Navigate } from "react-router-dom";
 const UpdateProfile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
 
-  const [name, setName] = useState(""); 
-  const [photoURL, setPhotoURL] = useState(""); 
-  const [redirect, setRedirect] = useState(false); 
+  const [name, setName] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -18,9 +17,9 @@ const UpdateProfile = () => {
     updateUserProfile({ displayName: name, photoURL: photoURL })
       .then(() => {
         toast.success("Profile updated successfully!");
-        setName(""); 
-        setPhotoURL(""); 
-        setRedirect(true); 
+        setName("");
+        setPhotoURL("");
+        setRedirect(true);
       })
       .catch((error) => {
         toast.error("Failed to update profile.");
@@ -34,9 +33,10 @@ const UpdateProfile = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="card card-compact bg-base-100 w-96 shadow-xl p-3 ">
-
         <div className="card-body">
-          <h2 className="text-center text-2xl font-bold mb-3">Update Your Profile</h2>
+          <h2 className="text-center text-2xl font-bold mb-3 text-[#E1713B]">
+            Update Your Profile
+          </h2>
           <form onSubmit={handleUpdate}>
             <div className="mb-4">
               <label
@@ -48,8 +48,8 @@ const UpdateProfile = () => {
               <input
                 id="name"
                 type="text"
-                value={name} 
-                onChange={(e) => setName(e.target.value)} 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="input input-bordered w-full"
                 placeholder="Enter your name"
                 required
@@ -65,15 +65,18 @@ const UpdateProfile = () => {
               <input
                 id="photo"
                 type="url"
-                value={photoURL} 
-                onChange={(e) => setPhotoURL(e.target.value)} 
+                value={photoURL}
+                onChange={(e) => setPhotoURL(e.target.value)}
                 className="input input-bordered w-full"
                 placeholder="Enter photo URL"
                 required
               />
             </div>
             <div className="card-actions justify-end">
-              <button type="submit" className="btn btn-primary w-full">
+              <button
+                type="submit"
+                className="btn bg-[#E1713B] hover:bg-orange-600 w-full text-white"
+              >
                 <FaUserEdit className="mr-2" /> Update Profile
               </button>
             </div>
@@ -84,4 +87,4 @@ const UpdateProfile = () => {
   );
 };
 
-export default UpdateProfile
+export default UpdateProfile;
