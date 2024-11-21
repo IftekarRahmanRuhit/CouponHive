@@ -5,8 +5,7 @@ import toast from "react-hot-toast";
 import { FaUserCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { LuLogIn } from "react-icons/lu";
-;
-import logo from '../../public/logo.png'
+import logo from "../../public/logo.png";
 
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
@@ -28,27 +27,50 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
+            isActive
+              ? "text-[#E1713B] font-semibold underline"
+              : "text-black hover:text-[#E1713B] font-semibold"
           }
         >
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/brands"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
-          }>Brands</NavLink>
+        <NavLink
+          to="/brands"
+          className={({ isActive }) =>
+            isActive
+              ? "text-[#E1713B] font-semibold underline"
+              : "text-black hover:text-[#E1713B] font-semibold"
+          }
+        >
+          Brands
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/about"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold underline" : "text-black hover:text-[#E1713B] font-semibold"
-          }>About us</NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "text-[#E1713B] font-semibold underline"
+              : "text-black hover:text-[#E1713B] font-semibold"
+          }
+        >
+          About us
+        </NavLink>
       </li>
       {user && (
         <li>
-          <NavLink to="/profile"           className={({ isActive }) =>
-            isActive ? "text-[#E1713B] font-semibold underline " : "text-black hover:text-[#E1713B] font-semibold"
-          }>Profile</NavLink>
+          <NavLink
+            to="/profile"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#E1713B] font-semibold underline "
+                : "text-black hover:text-[#E1713B] font-semibold"
+            }
+          >
+            Profile
+          </NavLink>
         </li>
       )}
     </>
@@ -69,8 +91,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full mx-auto bg-blue-50 p-2 ">
-      <div className="navbar w-11/12 mx-auto">
+    <div className="w-full mx-auto bg-blue-50 md:p-2 ">
+      <div className="navbar w-full md:w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
             <button
@@ -103,9 +125,8 @@ const Navbar = () => {
             to="/"
             className="btn btn-ghost text-2xl text-[#E1713B] font-bold flex justify-center items-center "
           >
-            {/* <p className="text-2xl"><RiCoupon3Fill /></p> */}
             <img className="w-9 h-w-9 rounded-full" src={logo} alt="" />
-           <p className="text-2xl"> CouponHive</p>
+            <p className=" text-lg md:text-2xl"> CouponHive</p>
           </Link>
         </div>
 

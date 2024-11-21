@@ -28,7 +28,7 @@ const Brands = () => {
         Explore All Brands
       </h1>
 
-      {/* Search Bar */}
+
       <div className="text-center mb-6">
         <div className="relative inline-block">
           <input

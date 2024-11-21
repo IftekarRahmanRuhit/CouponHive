@@ -12,7 +12,7 @@ const Banner = () => {
 
         const interval = setInterval(() => {
             setActiveSlide((prev) => (prev === 4 ? 1 : prev + 1)); 
-        }, 3000); 
+        }, 2000); 
 
 
         return () => clearInterval(interval);
@@ -27,7 +27,7 @@ const Banner = () => {
                 >
                     <img
                         src={img1}
-                        className="w-full h-[450px]"
+                        className="w-full lg:h-[450px]"
                     />
                 </div>
                 <div
@@ -36,7 +36,7 @@ const Banner = () => {
                 >
                     <img
                         src={img2}
-                        className="w-full h-[450px]"
+                        className="w-full lg:h-[450px]"
                     />
                 </div>
                 <div
@@ -45,7 +45,7 @@ const Banner = () => {
                 >
                     <img
                         src={img3}
-                        className="w-full h-[450px]"
+                        className="w-full lg:h-[450px]"
                     />
                 </div>
                 <div
@@ -54,7 +54,7 @@ const Banner = () => {
                 >
                     <img
                         src={img4}
-                        className="w-full h-[450px]"
+                        className="w-full lg:h-[450px]"
                     />
                 </div>
             </div>

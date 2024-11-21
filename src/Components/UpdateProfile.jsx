@@ -50,7 +50,7 @@ const UpdateProfile = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-[#E1713B]"
                 placeholder="Enter your name"
                 required
               />
@@ -67,7 +67,7 @@ const UpdateProfile = () => {
                 type="url"
                 value={photoURL}
                 onChange={(e) => setPhotoURL(e.target.value)}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-[#E1713B]"
                 placeholder="Enter photo URL"
                 required
               />

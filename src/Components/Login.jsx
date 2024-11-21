@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { auth } from "../Firebase/Firebase.init";
 import loginbg from "../../public/login-bg.png";
+import google from "../../public/google.png";
+import user from "../../public/user.png";
 
 
 const Login = () => {
@@ -63,34 +65,36 @@ const Login = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero  min-h-screen mt-4">
       <div className="hero-content flex-col lg:flex-row-reverse w-full">
 
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-blue-50 w-full max-w-lg shrink-0 shadow-2xl border mb-16">
           <form onSubmit={handleLogin} className="card-body">
-            <h1 className="text-3xl font-bold text-center mb-4">Login Now!</h1>
-            <div className="form-control">
+            <img className="w-12 h-12 mx-auto" src={user} alt="" />
+            <h1 className="text-3xl font-bold text-center text-[#E1713B]">Welcome Back</h1>
+            <p className="text-center text-gray-500 font-medium">Please enter your deatils to sign in</p>
+            <div className="form-control mt-4">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text text-lg font-semibold">Email</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email"
                 ref={emailRef}
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-[#E1713B]"
                 required
               />
             </div>
             <div className="form-control relative">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text text-lg font-semibold">Password</span>
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Enter your password"
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-[#E1713B]"
                 required
               />
               <button
@@ -104,7 +108,7 @@ const Login = () => {
                 <a
                   onClick={handleForgetPassword}
                   
-                  className="label-text-alt link link-hover text-blue-500"
+                  className="label-text-alt link link-hover text-[#E1713B] text-sm font-medium"
                 >
                   Forgot password?
                 </a>
@@ -112,39 +116,35 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <button
-                className="btn btn-primary w-full"
-                disabled={loading} // Disable button when loading
+                className="btn bg-[#E1713B] hover:bg-orange-600 w-full text-white font-semibold"
+                disabled={loading} 
               >
                 {loading ? "Loading..." : "Login"}
               </button>
             </div>
-            <p className="text-center mt-4">
-              Don't have an account?{" "}
-              <Link to="/register" className="text-blue-500 underline">
+            <p className="text-center mt-4 font-medium">
+              Don't have an account?
+              <Link to="/register" className="text-[#E1713B] underline">
                 Register
               </Link>
             </p>
           </form>
-          <div className="mt-6">
+          <div className="mb-5 text-center">
             <button
               onClick={handleGoogleSignIn}
-              className="btn btn-outline w-full"
+              className="btn btn-ghost "
               disabled={loading} 
             >
-              {loading ? "Loading..." : "Sign In with Google"}
+              <div className="flex justify-center items-center space-x-2"> 
+                <img className="w-5 h-5" c src={google} alt="" />
+              <p className="font-bold">{loading ? "Loading..." : "Sign In with Google"}</p>
+              </div>
             </button>
           </div>
         </div>
 
 
-        <div className="flex flex-col justify-center items-center text-center lg:text-left lg:w-1/2 space-y-6">
-          <h1 className="text-5xl font-bold">Welcome Back!</h1>
-          <p className="py-6">
-            Login to access your account and continue exploring. Don’t have an
-            account? Click the register button below to create one!
-          </p>
-          <img src={loginbg} alt="" className="max-w-full lg:max-w-md" />
-        </div>
+
       </div>
     </div>
   );

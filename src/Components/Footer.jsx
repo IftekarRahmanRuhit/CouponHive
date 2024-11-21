@@ -55,14 +55,14 @@ const Footer = () => {
               <FaInstagram className="text-2xl" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/"
               className="text-gray-400 hover:text-blue-600"
               aria-label="Follow us on Facebook"
             >
               <FaFacebookF className="text-2xl" />
             </a>
             <a
-              href="#"
+              href="https://www.x.com/"
               className="text-gray-400 hover:text-blue-600"
               aria-label="Follow us on Twitter"
             >
