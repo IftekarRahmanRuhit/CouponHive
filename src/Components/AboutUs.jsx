@@ -1,5 +1,6 @@
 import about from "../../public/about-us-banner.jpg";
 import shop from "../../public/shop-image.jpg";
+import "animate.css";
 
 const AboutUs = () => {
   return (
@@ -8,7 +9,7 @@ const AboutUs = () => {
         <img src={about} alt="" />
       </div>
       <div className="w-11/12 mx-auto">
-        <p className="text-center mt-10 text-3xl font-bold text-[#E1713B]">
+        <p className="animate__animated animate__bounceInRight text-center mt-10 text-3xl font-bold text-[#E1713B]">
           About CouponHive
         </p>
         <p className="mt-5 text-center font-semibold text-2xl">

@@ -425,7 +425,7 @@
     "rating": 3,
     "description": "Innovative beauty and wellness products.",
     "brand_logo": "https://i.ibb.co.com/VCfCR37/FOREO-Logo-500x281.png",
-    "total_coupons": "9",
+    "total_coupons": "4",
     "coupons": [
       {
         "coupon_code": "BEAUTY15",
@@ -459,6 +459,289 @@
     "shop_link": "https://www.foreo.com",
     "category": "Beauty",
     "isSaleOn": true
+  },
+  {
+    "id": "9",
+    "brand_name": "Amazon",
+    "rating": 5,
+    "description": "World's largest online retailer offering everything from books to electronics.",
+    "brand_logo": "https://i.ibb.co.com/tKpGVk8/amazon.png",
+    "total_coupons": "12",
+    "coupons": [
+      {
+        "coupon_code": "AMZ10",
+        "description": "10% off on your first purchase",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for new customers only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZ20",
+        "description": "20% off on electronics",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid on select electronics items",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZFREESHIP",
+        "description": "Free shipping on orders over $50",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid on orders above $50",
+        "coupon_type": "Free_shipping"
+      },
+      {
+        "coupon_code": "AMZGIFT10",
+        "description": "$10 off on gift cards",
+        "expiry_date": "2025-01-31",
+        "condition": "Valid on Amazon gift cards only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZSAVE15",
+        "description": "15% off on home & kitchen products",
+        "expiry_date": "2025-02-01",
+        "condition": "Valid on select home & kitchen items",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZBOOKS5",
+        "description": "5% off on books",
+        "expiry_date": "2025-01-10",
+        "condition": "Valid on books only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZ25OFF",
+        "description": "25% off on fashion apparel",
+        "expiry_date": "2025-03-01",
+        "condition": "Valid on selected fashion items",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZMEGA10",
+        "description": "10% off on selected tech gadgets",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid on tech gadgets only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZHOLIDAY15",
+        "description": "15% off on holiday decorations",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid on holiday decor items only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZPREMIUM30",
+        "description": "30% off on Amazon Prime membership",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid for new Prime members only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZBUY2GET1",
+        "description": "Buy 2, Get 1 Free on select products",
+        "expiry_date": "2025-01-31",
+        "condition": "Valid on selected products",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AMZFLASH5",
+        "description": "5% off on flash sale items",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid only on flash sale items",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_link": "https://www.amazon.com",
+    "category": "Retail",
+    "isSaleOn": true
+  },
+  {
+    "id": "10",
+    "brand_name": "Rokomari.com",
+    "rating": 5,
+    "description": "Bangladesh's largest online bookstore, offering a wide range of books in various categories.",
+    "brand_logo": "https://i.ibb.co.com/1mdKKVm/rokomari.jpg",
+    "total_coupons": "6",
+    "coupons": [
+      {
+        "coupon_code": "ROKO5",
+        "description": "5% off on books",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid on all books",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "ROKOBOOK10",
+        "description": "10% off on orders over BDT 500",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid on orders above BDT 500",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "ROKOFREE",
+        "description": "Free delivery on orders above BDT 1000",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid on orders above BDT 1000",
+        "coupon_type": "Free_shipping"
+      },
+      {
+        "coupon_code": "ROKOSPECIAL20",
+        "description": "20% off on selected bestsellers",
+        "expiry_date": "2025-01-10",
+        "condition": "Valid on select bestseller books only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "ROKOKIDS15",
+        "description": "15% off on children's books",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid on kids' books only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "ROKOEXTRA25",
+        "description": "25% off on first purchase",
+        "expiry_date": "2025-02-01",
+        "condition": "Valid for new customers only",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_link": "https://www.rokomari.com",
+    "category": "Books",
+    "isSaleOn": true
+  },
+  {
+    "id": "11",
+    "brand_name": "Bikroy.com",
+    "rating": 4.2,
+    "description": "Bangladesh's leading online classifieds platform for buying and selling various products.",
+    "brand_logo": "https://i.ibb.co.com/MB37L9n/bikroy.png",
+    "total_coupons": "9",
+    "coupons": [
+      {
+        "coupon_code": "BIKROY10",
+        "description": "10% off on first purchase",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for new customers only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROY20",
+        "description": "20% off on electronics",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid on select electronics items",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROY5",
+        "description": "5% off on furniture",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid on selected furniture items",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROYFREE",
+        "description": "Free delivery on orders over BDT 2000",
+        "expiry_date": "2025-03-01",
+        "condition": "Valid on orders above BDT 2000",
+        "coupon_type": "Free_shipping"
+      },
+      {
+        "coupon_code": "BIKROY50",
+        "description": "BDT 50 off on used mobile phones",
+        "expiry_date": "2025-01-10",
+        "condition": "Valid on used mobile phones only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROY100",
+        "description": "BDT 100 off on home appliances",
+        "expiry_date": "2025-02-15",
+        "condition": "Valid on home appliances only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROYSALE15",
+        "description": "15% off on seasonal sale items",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid on seasonal sale products only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROYEXTRA25",
+        "description": "25% off on used vehicles",
+        "expiry_date": "2025-01-31",
+        "condition": "Valid on used vehicles only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BIKROYFURNITURE30",
+        "description": "30% off on furniture",
+        "expiry_date": "2025-03-10",
+        "condition": "Valid on selected furniture items",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_link": "https://www.bikroy.com",
+    "category": "Classifieds",
+    "isSaleOn": true
+  },
+  {
+    "id": "12",
+    "brand_name": "Pickaboo",
+    "rating": 4.6,
+    "description": "Leading online electronics store in Bangladesh, offering a variety of gadgets and home appliances.",
+    "brand_logo": "https://i.ibb.co.com/9bcQjMh/Pickaboo.png",
+    "total_coupons": "6",
+    "coupons": [
+      {
+        "coupon_code": "PICK10",
+        "description": "10% off on your first order",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for new customers only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PICK20",
+        "description": "20% off on smartphones",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid on selected smartphones",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PICKFREE",
+        "description": "Free shipping on orders above BDT 3000",
+        "expiry_date": "2025-02-28",
+        "condition": "Valid on orders above BDT 3000",
+        "coupon_type": "Free_shipping"
+      },
+      {
+        "coupon_code": "PICKDEAL15",
+        "description": "15% off on selected electronics deals",
+        "expiry_date": "2025-01-10",
+        "condition": "Valid on selected deals only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PICKHOME10",
+        "description": "10% off on home appliances",
+        "expiry_date": "2025-02-15",
+        "condition": "Valid on home appliances only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PICKGIFT25",
+        "description": "BDT 25 off on gift cards",
+        "expiry_date": "2025-01-31",
+        "condition": "Valid on gift cards only",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_link": "https://www.pickaboo.com",
+    "category": "Electronics",
+    "isSaleOn": false
   }
 
   ]

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import register from "../../public/register.png";
 
 const Register = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile} = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -43,6 +43,7 @@ const Register = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             e.target.reset();
+
             navigate("/");
           })
           .catch((error) => {

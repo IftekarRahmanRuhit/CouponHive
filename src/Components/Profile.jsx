@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
-
+import "animate.css";
 const Profile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-base-100 p-6">
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-[#E1713B]">
+        <h2 className="animate__animated animate__heartBeat text-3xl font-bold text-[#E1713B]">
           Welcome to Your Profile!
         </h2>
         <p className="text-gray-600 mt-2 text-lg">

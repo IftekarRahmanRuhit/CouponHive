@@ -7,11 +7,11 @@ import banking from '../../public/Money-Banking.png';
 import office from '../../public/Office-Supplies.png';
 import print from '../../public/Printable.png';
 import restaurant from '../../public/Restaurant.png';
-import travel from '../../public/Travel.png'; // New image for Travel
+import travel from '../../public/Travel.png'; 
 
 const FavouriteCategory = () => {
   return (
-    <div className="w-11/12 mx-auto mt-9">
+    <div className="w-11/12 mx-auto mt-9 max-w-screen-2xl">
       <div className="p-6 text-center">
         <h2 className=" text-3xl font-bold mb-12 text-[#E1713B] ">Favorite Categories</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">

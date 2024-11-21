@@ -1,6 +1,6 @@
 const FAQ = () => {
   return (
-    <div className="bg-slate-50 p-2 mt-10">
+    <div className="bg-slate-50 p-2 mt-10 max-w-screen-2xl mx-auto">
       <div className="w-11/12 mx-auto mt-20 mb-8">
         <div>
           <div>

@@ -28,7 +28,6 @@ const Brands = () => {
         Explore All Brands
       </h1>
 
-
       <div className="text-center mb-6">
         <div className="relative inline-block">
           <input
@@ -40,14 +39,12 @@ const Brands = () => {
           />
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#E1713B]"
-            onClick={() => (searchQuery)}
+            onClick={() => searchQuery}
           >
             <FaSearch />
           </button>
         </div>
       </div>
-
-
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 mb-20">
         {filteredBrands.map((brand) => (
@@ -55,7 +52,6 @@ const Brands = () => {
             key={brand.id}
             className="card p-4 border border-1 rounded-lg shadow-xl flex flex-col justify-between transition hover:scale-105 overflow-hidden bg-base-100"
           >
-
             <img
               src={brand.brand_logo}
               alt={brand.brand_name}
@@ -65,7 +61,6 @@ const Brands = () => {
             <div className="flex flex-col items-center mb-4">
               <h3 className="text-xl font-bold">{brand.brand_name}</h3>
               <div className="star-rating text-yellow-500 mt-2 font-bold text-2xl">
-
                 {"★".repeat(brand.rating)}
               </div>
             </div>
@@ -73,17 +68,17 @@ const Brands = () => {
               {brand.description}
             </p>
 
-
-            {brand.isSaleOn ? (
-              <p className="animate__animated animate__bounce text-red-600 text-center mb-4 text-xl font-bold">
-                Sale is On
-              </p>
-            ) : (
-              <p className="text-gray-800 text-center mb-4  font-semibold">
-                No Sale Right Now
-              </p>
-            )}
-
+            <div className="flex items-center justify-center h-16">
+              {brand.isSaleOn ? (
+                <p className="animate__animated animate__bounce animate__slow animate__repeat-3	3 animate__delay-1s	1s text-red-600 text-center text-xl font-bold">
+                  Sale is On
+                </p>
+              ) : (
+                <p className="text-gray-800 text-center font-semibold">
+                  No Sale Right Now
+                </p>
+              )}
+            </div>
 
             <button
               onClick={() => handleViewCoupons(brand.id)}

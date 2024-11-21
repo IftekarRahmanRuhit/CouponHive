@@ -19,7 +19,7 @@ const Banner = () => {
     }, []);
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             <div className="carousel w-full">
                 <div
                     id="slide1"

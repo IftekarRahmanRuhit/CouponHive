@@ -91,7 +91,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full mx-auto bg-blue-50 md:p-2 ">
+    <div className="w-full mx-auto bg-blue-50 md:p-2 max-w-screen-2xl ">
       <div className="navbar w-full md:w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
