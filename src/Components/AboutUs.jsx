@@ -4,7 +4,7 @@ import "animate.css";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="max-w-screen-2xl mx-auto">
       <div>
         <img src={about} alt="" />
       </div>
