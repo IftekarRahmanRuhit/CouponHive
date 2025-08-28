@@ -9,7 +9,7 @@ const TopBrands = () => {
   const navigate = useNavigate(); 
 
   return (
-    <div className="py-16 md:py-20 w-11/12 mx-auto bg-gradient-to-br from-gray-50 via-white to-orange-50 max-w-screen-2xl">
+    <div className="py-16 md:py-20  mx-auto bg-gradient-to-br from-gray-50 via-white to-orange-50 max-w-screen-2xl">
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 mb-4">
           <FaStar className="text-orange-500 text-xl" />
@@ -25,7 +25,7 @@ const TopBrands = () => {
         </p>
       </div>
       
-      <div className="relative">
+      <div className="relative w-11/12 mx-auto">
         <Marquee pauseOnHover gradient={false} speed={40} className="py-8">
           {data.map((brand) => (
             <div
@@ -33,7 +33,7 @@ const TopBrands = () => {
               className="mx-6 cursor-pointer group"
               onClick={() => navigate(`/brands`)}
             >
-              <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200 group-hover:scale-105">
+              <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200 group-hover:scale-105 ">
                 <div className="w-32 h-32 md:w-36 md:h-36 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 mb-4 group-hover:from-orange-50 group-hover:to-orange-100 transition-all duration-300">
                   <img
                     src={brand.brand_logo}

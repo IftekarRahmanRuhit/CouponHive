@@ -7,7 +7,7 @@ const OnSellBrands = () => {
   const saleBrands = data.filter(brand => brand.isSaleOn);
 
   return (
-    <div className="max-w-screen-2xl mx-auto py-16 md:py-20">
+    <div className="max-w-screen-2xl mx-auto">
       <div className="bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 ">
         {/* Header Section */}
         <div className="text-center py-12 px-6">
@@ -29,7 +29,7 @@ const OnSellBrands = () => {
         </div>
 
         {/* Brands Grid */}
-        <div className="px-6 pb-16 max-w-screen-2xl mx-auto">
+        <div className="px-6 pb-16 w-11/12 mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {saleBrands.map((brand) => (
               <Link 
