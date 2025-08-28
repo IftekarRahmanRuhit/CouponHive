@@ -175,7 +175,7 @@ const Banner = () => {
             `}</style>
             
             <div
-                className="relative w-full h-[300px] xs:h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px] 2xl:h-[700px] overflow-hidden shadow-2xl"
+                className="relative max-w-screen-2xl mx-auto w-full h-[300px] xs:h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px] 2xl:h-[700px] overflow-hidden shadow-2xl"
                 role="region"
                 aria-roledescription="carousel"
                 aria-label="Featured promotions"

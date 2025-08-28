@@ -80,7 +80,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100">
+    <div className="sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100 max-w-screen-2xl mx-auto">
       <div className="navbar w-full md:w-[1400px] mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
