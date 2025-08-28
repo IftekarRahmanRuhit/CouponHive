@@ -21,16 +21,17 @@ const Navbar = () => {
       });
   };
 
+  const linkClassName = ({ isActive }) =>
+    isActive
+      ? "text-[#E1713B] font-semibold relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-[#E1713B]"
+      : "text-gray-700 hover:text-[#E1713B] font-semibold transition-colors";
+
   const links = (
     <>
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive
-              ? "text-[#E1713B] font-semibold underline"
-              : "text-black hover:text-[#E1713B] font-semibold"
-          }
+          className={linkClassName}
         >
           Home
         </NavLink>
@@ -38,11 +39,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/brands"
-          className={({ isActive }) =>
-            isActive
-              ? "text-[#E1713B] font-semibold underline"
-              : "text-black hover:text-[#E1713B] font-semibold"
-          }
+          className={linkClassName}
         >
           Brands
         </NavLink>
@@ -50,11 +47,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/about"
-          className={({ isActive }) =>
-            isActive
-              ? "text-[#E1713B] font-semibold underline"
-              : "text-black hover:text-[#E1713B] font-semibold"
-          }
+          className={linkClassName}
         >
           About us
         </NavLink>
@@ -63,11 +56,7 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/profile"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#E1713B] font-semibold underline "
-                : "text-black hover:text-[#E1713B] font-semibold"
-            }
+            className={linkClassName}
           >
             Profile
           </NavLink>
@@ -91,13 +80,14 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full mx-auto bg-blue-50 md:p-2 max-w-screen-2xl ">
-      <div className="navbar w-full md:w-11/12 mx-auto">
+    <div className="sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100">
+      <div className="navbar w-full md:w-[1400px] mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
             <button
               className="btn btn-ghost lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle navigation menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,22 +106,22 @@ const Navbar = () => {
             </button>
 
             {isMenuOpen && (
-              <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-56 p-3 shadow">
                 {links}
               </ul>
             )}
           </div>
           <Link
             to="/"
-            className="btn btn-ghost text-2xl text-[#E1713B] font-bold flex justify-center items-center "
+            className="btn btn-ghost normal-case text-xl md:text-2xl text-[#E1713B] font-extrabold flex items-center gap-2"
           >
-            <img className="w-9 h-w-9 rounded-full" src={logo} alt="" />
-            <p className=" text-lg md:text-2xl"> CouponHive</p>
+            <img className="w-9 h-9 rounded-full" src={logo} alt="CouponHive logo" />
+            <span>CouponHive</span>
           </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu-horizontal space-x-8">{links}</ul>
+          <ul className="menu-horizontal gap-8">{links}</ul>
         </div>
 
         <div className="navbar-end">
@@ -139,13 +129,13 @@ const Navbar = () => {
             <div className="flex-none">
               <div className="dropdown dropdown-end">
                 <div
-                  tabindex="0"
+                  tabIndex={0}
                   role="button"
                   className="btn btn-ghost btn-circle avatar"
                 >
                   <div className="w-10 rounded-full">
                     {user?.photoURL ? (
-                      <img src={user.photoURL} alt="" />
+                      <img src={user.photoURL} alt="User avatar" />
                     ) : (
                       <p className="text-2xl">
                         <FaUserCircle />
@@ -154,8 +144,8 @@ const Navbar = () => {
                   </div>
                 </div>
                 <ul
-                  tabindex="0"
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-3 shadow"
                 >
                   <div className="card-body p-2 w-full">
                     <span className="text-lg font-bold"></span>
@@ -170,7 +160,7 @@ const Navbar = () => {
                     <div className="card-actions">
                       <button
                         onClick={handleSignOut}
-                        className="btn bg-[#E1713B] text-white hover:bg-orange-500 btn-block w-full mt-3"
+                        className="btn bg-[#E1713B] text-white hover:bg-orange-500 btn-block mt-3"
                       >
                         Sign out
                       </button>
@@ -182,13 +172,13 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                className="btn mr-2 bg-[#E1713B] text-white hover:text-[#E1713B] hidden md:flex"
+                className="btn mr-2 bg-[#E1713B] border-[#E1713B] text-white hover:bg-transparent hover:text-[#E1713B] hidden md:flex"
                 to="/Register"
               >
                 <FaUser /> sign up
               </Link>
               <Link
-                className="btn font-bold bg-[#E1713B] text-white hover:text-[#E1713B]"
+                className="btn font-bold bg-[#E1713B] border-[#E1713B] text-white hover:bg-transparent hover:text-[#E1713B]"
                 to="/login"
               >
                 <LuLogIn />
