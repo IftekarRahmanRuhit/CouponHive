@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaEye, FaEyeSlash, FaTags, FaUserPlus, FaCheckCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
-import register from "../../public/register.png";
+const register = "/register.png";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);

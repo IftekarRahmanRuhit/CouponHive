@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaTags, FaUsers, FaPiggyBank } from "react-icons/fa";
-import google from "../../public/google.png";
-import user from "../../public/user.png";
+const google = "/google.png";
+const user = "/user.png";
 
 const Login = () => {
   const { signINUser, signInWithGoogle, loading, setLoading } = useContext(AuthContext);

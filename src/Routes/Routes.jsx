@@ -51,7 +51,7 @@ import ForgetPassword from "../Components/ForgetPassword";
         },
         {
             path: '/brands/:id',
-            element:<PrivateRoute><BrandDetails></BrandDetails>,</PrivateRoute>,
+            element:<PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
             loader:()=> fetch("/CouponData.json")
         },
         {

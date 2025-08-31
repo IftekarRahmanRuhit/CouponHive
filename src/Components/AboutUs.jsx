@@ -1,6 +1,6 @@
 
-import about from "../../public/about-us-banner.jpg";
-import shop from "../../public/shop-image.jpg";
+const about = "/about-us-banner.jpg";
+const shop = "/shop-image.jpg";
 import { useState, useEffect } from "react";
 
 const AboutUs = () => {

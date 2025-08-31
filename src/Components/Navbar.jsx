@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaUserCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { LuLogIn } from "react-icons/lu";
-import logo from "../../public/logo.png";
+const logo = "/logo.png";
 
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);

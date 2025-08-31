@@ -1,15 +1,15 @@
 
 import React from "react";
 import { FaHeart, FaArrowRight, FaStar, FaFire } from "react-icons/fa";
-import pet from '../../public/favourite-1.png';
-import bag from '../../public/favourite-2.png';
-import media from '../../public/Media.png';
-import mobile from '../../public/Mobile-Apps.png';
-import banking from '../../public/Money-Banking.png';
-import office from '../../public/Office-Supplies.png';
-import print from '../../public/Printable.png';
-import restaurant from '../../public/Restaurant.png';
-import travel from '../../public/Travel.png'; 
+const pet = "/favourite-1.png";
+const bag = "/favourite-2.png";
+const media = "/Media.png";
+const mobile = "/Mobile-Apps.png";
+const banking = "/Money-Banking.png";
+const office = "/Office-Supplies.png";
+const print = "/Printable.png";
+const restaurant = "/Restaurant.png";
+const travel = "/Travel.png"; 
 
 const FavouriteCategory = () => {
   const categories = [
