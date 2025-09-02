@@ -4,6 +4,7 @@ import TopBrands from './TopBrands';
 import OnSellBrands from './OnSellBrands';
 import FavouriteCategory from './FavouriteCategory';
 import FAQ from './FAQ';
+import HowItWorks from './HowItWorks';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
         <TopBrands></TopBrands>
        
         <OnSellBrands></OnSellBrands>
+        <HowItWorks></HowItWorks>
         <FavouriteCategory></FavouriteCategory>
         <FAQ></FAQ>
         </div>
