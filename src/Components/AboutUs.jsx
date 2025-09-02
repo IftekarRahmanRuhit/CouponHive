@@ -2,6 +2,7 @@
 const about = "/about-us-banner.jpg";
 const shop = "/shop-image.jpg";
 import { useState, useEffect } from "react";
+import { FaHeart, FaShieldAlt, FaUsers, FaLightbulb, FaHandshake, FaStar } from "react-icons/fa";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -110,6 +111,160 @@ const AboutUs = () => {
                 />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-[#E1713B] to-[#F9A266] opacity-20 rounded-2xl -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values & Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Mission Statement */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#E1713B] to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                <FaHeart className="text-white text-xl animate-pulse" />
+              </div>
+              <span className="text-sm font-semibold text-[#E1713B] uppercase tracking-wider bg-orange-50 px-4 py-2 rounded-full">
+                Our Mission
+              </span>
+              <div className="w-12 h-12 bg-gradient-to-r from-[#E1713B] to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                <FaStar className="text-white text-xl animate-pulse" />
+              </div>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+              Empowering Smart Shopping for <span className="bg-gradient-to-r from-[#E1713B] to-orange-500 bg-clip-text text-transparent">Everyone</span>
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We believe everyone deserves to shop smarter and save more. Our mission is to democratize 
+              access to the best deals, making premium shopping experiences affordable for all.
+            </p>
+          </div>
+
+          {/* Core Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: FaShieldAlt,
+                title: "Trust & Security",
+                description: "Every coupon is verified and tested before being published. We maintain the highest standards of security and reliability.",
+                color: "from-blue-500 to-cyan-500",
+                bgColor: "bg-blue-50",
+                borderColor: "border-blue-200"
+              },
+              {
+                icon: FaUsers,
+                title: "Community First",
+                description: "Our community of savvy shoppers drives everything we do. We listen, learn, and grow together.",
+                color: "from-green-500 to-emerald-500",
+                bgColor: "bg-green-50",
+                borderColor: "border-green-200"
+              },
+              {
+                icon: FaLightbulb,
+                title: "Innovation",
+                description: "We constantly innovate to bring you the latest features and the most effective ways to save money.",
+                color: "from-yellow-500 to-orange-500",
+                bgColor: "bg-yellow-50",
+                borderColor: "border-yellow-200"
+              },
+              {
+                icon: FaHandshake,
+                title: "Partnership",
+                description: "We build strong relationships with brands to bring you exclusive deals that you won't find anywhere else.",
+                color: "from-purple-500 to-pink-500",
+                bgColor: "bg-purple-50",
+                borderColor: "border-purple-200"
+              },
+              {
+                icon: FaHeart,
+                title: "Customer Love",
+                description: "Your satisfaction is our priority. We go above and beyond to ensure you have the best shopping experience.",
+                color: "from-red-500 to-pink-500",
+                bgColor: "bg-red-50",
+                borderColor: "border-red-200"
+              },
+              {
+                icon: FaStar,
+                title: "Excellence",
+                description: "We strive for excellence in everything we do, from code verification to customer support.",
+                color: "from-indigo-500 to-purple-500",
+                bgColor: "bg-indigo-50",
+                borderColor: "border-indigo-200"
+              }
+            ].map((value, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-[#E1713B]/30 overflow-hidden"
+              >
+                {/* Icon Container */}
+                <div className={`${value.bgColor} p-8 text-center border-b ${value.borderColor} group-hover:scale-105 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-full flex items-center justify-center shadow-lg mx-auto group-hover:shadow-xl transition-all duration-300`}>
+                    <value.icon className="text-white text-2xl group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#E1713B] transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+
+                {/* Hover Effects */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#E1713B]/20 transition-all duration-500 pointer-events-none"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Commitment Section */}
+          <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-orange-100 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Our Commitment to You
+              </h3>
+              <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                We're not just a coupon website – we're your shopping partner, committed to helping you 
+                make the most of every purchase while building a community of smart, empowered shoppers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-orange-100">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E1713B] to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaShieldAlt className="text-white text-xl" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">100% Verified Codes</h4>
+                <p className="text-sm text-gray-600">
+                  Every coupon is tested and verified by our team before publication
+                </p>
+              </div>
+
+              <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-orange-100">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E1713B] to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaUsers className="text-white text-xl" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">24/7 Support</h4>
+                <p className="text-sm text-gray-600">
+                  Our dedicated team is always here to help you save more
+                </p>
+              </div>
+
+              <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-orange-100">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E1713B] to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaStar className="text-white text-xl" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Exclusive Deals</h4>
+                <p className="text-sm text-gray-600">
+                  Partner with top brands to bring you deals you won't find elsewhere
+                </p>
+              </div>
             </div>
           </div>
         </div>
