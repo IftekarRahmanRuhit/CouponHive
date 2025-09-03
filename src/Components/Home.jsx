@@ -6,6 +6,7 @@ import FavouriteCategory from "./FavouriteCategory";
 import FAQ from "./FAQ";
 import HowItWorks from "./HowItWorks";
 import Testimonials from "./Testimonials";
+import MobileApp from "./MobileApp";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <HowItWorks></HowItWorks>
       <FavouriteCategory></FavouriteCategory>
       <Testimonials></Testimonials>
+      <MobileApp></MobileApp>
       <FAQ></FAQ>
     </div>
   );
